@@ -32,7 +32,7 @@ header {
 }
 
 /* Styling for the header's h2 element */
-header  h2 {
+header h2 {
   padding-bottom: 2rem;
   margin-left: 30rem;
   font-size: 5rem;
@@ -87,9 +87,13 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #FCEEE6;
+  min-height: 100vh;
 }
 
-nav ul{
+/* NOTE: Removed the SECOND body{} that was forcing everything into a centered flex row.
+   That was the reason your feedback message/layout was drifting to the right. */
+
+nav ul {
   font-family: 'Alegreya SC';
 }
 
@@ -153,16 +157,12 @@ h1 {
 .contact form {
   flex: 1;
 }
-.form-feedback{
-  margin-top: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
 
 /* Styling for contact paragraphs */
 .contact p {
   line-height: 1.8;
   text-align: center;
+  font-family: 'Alegreya SC';
 }
 
 /* Styling for social media icons */
@@ -235,33 +235,27 @@ form button {
   animation: wiggle 2s linear infinite;
 }
 
-.contact p{
-  font-family: 'Alegreya SC';
-}
-
 /* Keyframes animation for button wiggle effect */
 @keyframes wiggle {
-  0%, 7% {
-    transform: rotateZ(0);
-  }
-  15% {
-    transform: rotateZ(-15deg);
-  }
-  20% {
-    transform: rotateZ(10deg);
-  }
-  25% {
-    transform: rotateZ(-10deg);
-  }
-  30% {
-    transform: rotateZ(6deg);
-  }
-  35% {
-    transform: rotateZ(-4deg);
-  }
-  40%, 100% {
-    transform: rotateZ(0);
-  }
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
+/* ✅ FORCE feedback message under the button (fix for your issue) */
+#contact-form .form-feedback {
+  display: block;
+  width: 100%;
+  clear: both;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  position: static !important;
 }
 
 /* Styling for the footer */
@@ -369,7 +363,7 @@ form button {
   position: relative;
   height: 1.0rem;
   background: #6a6a6a;
-  width:  0%;
+  width: 0%;
   top: 3rem;
   left: 1.125rem;
   margin-top: 0.5rem;
@@ -377,77 +371,54 @@ form button {
   animation: fill 5s infinite alternate, colors 5s infinite alternate;
 }
 
-.bar.fill1 {
-  animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
-}
-
-.bar.fill2 {
-  animation: fill-2 5s infinite alternate, colors 5s infinite alternate;
-}
-
-.bar.fill3 {
-  animation: fill-3 5s infinite alternate, colors 5s infinite alternate;
-}
-
-.bar.fill4 {
-  animation: fill-4 5s infinite alternate, colors 5s infinite alternate;
-}
-
-.bar.fill5 {
-  animation: fill-5 5s infinite alternate, colors 5s infinite alternate;
-}
-
-.bar.fill6 {
-  animation: fill-6 5s infinite alternate, colors 5s infinite alternate;
-}
+.bar.fill1 { animation: fill-1 5s infinite alternate, colors 5s infinite alternate; }
+.bar.fill2 { animation: fill-2 5s infinite alternate, colors 5s infinite alternate; }
+.bar.fill3 { animation: fill-3 5s infinite alternate, colors 5s infinite alternate; }
+.bar.fill4 { animation: fill-4 5s infinite alternate, colors 5s infinite alternate; }
+.bar.fill5 { animation: fill-5 5s infinite alternate, colors 5s infinite alternate; }
+.bar.fill6 { animation: fill-6 5s infinite alternate, colors 5s infinite alternate; }
 
 /* Keyframe animations for filling progress bars and changing colors. */
 @keyframes fill {
-  0%   { width: 0; }
-  33%  { width: 30px; }
-  66%  { width: 10px; }
+  0% { width: 0; }
+  33% { width: 30px; }
+  66% { width: 10px; }
   100% { width: 105px; }
 }
-
 @keyframes fill-1 {
-  0%   { width: 0; }
-  33%  { width: 50px; }
-  66%  { width: 20px; }
+  0% { width: 0; }
+  33% { width: 50px; }
+  66% { width: 20px; }
   100% { width: 130px; }
 }
-
 @keyframes fill-2 {
-  0%   { width: 0; }
-  33%  { width: 90px; }
-  66%  { width: 70px; }
+  0% { width: 0; }
+  33% { width: 90px; }
+  66% { width: 70px; }
   100% { width: 136px; }
 }
-
 @keyframes fill-3 {
-  0%   { width: 0; }
-  33%  { width: 50px; }
-  66%  { width: 24px; }
+  0% { width: 0; }
+  33% { width: 50px; }
+  66% { width: 24px; }
   100% { width: 109px; }
 }
-
 @keyframes fill-4 {
-  0%   { width: 0; }
-  33%  { width: 98px; }
-  66%  { width: 34px; }
+  0% { width: 0; }
+  33% { width: 98px; }
+  66% { width: 34px; }
   100% { width: 99px; }
 }
-
 @keyframes fill-5 {
-  0%   { width: 0; }
-  33%  { width: 30px; }
-  66%  { width: 10px; }
+  0% { width: 0; }
+  33% { width: 30px; }
+  66% { width: 10px; }
   100% { width: 148px; }
 }
-
 @keyframes fill-6 {
-  0%   { width: 0; }
-  33%  { width: 48px; }
-  66%  { width: 22px; }
+  0% { width: 0; }
+  33% { width: 48px; }
+  66% { width: 22px; }
   100% { width: 140px; }
 }
 
@@ -459,7 +430,7 @@ form button {
 
 /* Styling for the navigation bar. */
 nav {
-  background-color: #333; /* Change this to your desired background color */
+  background-color: #333;
   overflow-x: scroll;
   display: flex;
   justify-content: space-between;
@@ -475,15 +446,13 @@ nav ul {
   padding-right: 1rem;
 }
 
-
-
 /* Styling the navigation header */
 nav h1 {
   margin: 0;
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  font-family: 'Kaushan Script', cursive; 
+  font-family: 'Kaushan Script', cursive;
   text-shadow: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.5);
 }
 
@@ -492,44 +461,45 @@ nav h1 {
   src: url('../KaushanScript-Regular.otf');
 }
 
-
-
+/* Mobile nav */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
-  
+
   nav ul {
     flex-direction: column;
     gap: 1rem;
-    font-family: 'Alegreya SC';  }
+    font-family: 'Alegreya SC';
+  }
 
   nav ul a {
     margin-right: 0;
   }
 }
 
+/* WAVIY TEXT EFFECT
+   NOTE: We DO NOT touch body anymore for this.
+   Apply layout to the waviy container itself.
+*/
 .waviy {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-  
-body {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-}
 
-.waviy {
   background-color: #000;
   position: relative;
   -webkit-box-reflect: below -3rem linear-gradient(transparent, rgba(0,0,0,0.5));
   font-size: 3.75rem;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .waviy span {
   font-family: 'Alfa Slab One', cursive;
   position: relative;
@@ -542,14 +512,10 @@ body {
 
 /* Keyframe animation for text wave effect. */
 @keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-1.25rem)
-  }
+  0%, 40%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-1.25rem); }
 }
-  
+
 /* Styling for the skills section. */
 .skills {
   padding: 5rem 0;
@@ -598,39 +564,32 @@ body {
   color: #fff;
   border-radius: 0.3rem;
   font-size: 1.1rem;
-  /* height: 45px; */
   width: 9.3rem;
 }
 
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-  /* For smaller screens */
-  @media (max-width: 768px) {
-    .about-me-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .about-me-container img {
-      width: 80%;
-      height: auto;
-      margin: 1rem 0;
-    }
-    
-    .about-me-container p {
-      margin: 1rem;
-    }
+  .about-me-container img {
+    width: 80%;
+    height: auto;
+    margin: 1rem 0;
   }
-  
-  /* For smaller screens */
-  @media (max-width: 768px) {
-    .projects {
-      grid-template-columns: 100%;
-      padding-left: 2rem;
-    }
-    
-    .flip-box {
-      width: 100%;
-    }
+
+  .about-me-container p {
+    margin: 1rem;
   }
-  
- 
+
+  .projects {
+    grid-template-columns: 100%;
+    padding-left: 2rem;
+  }
+
+  .flip-box {
+    width: 100%;
+  }
+}
