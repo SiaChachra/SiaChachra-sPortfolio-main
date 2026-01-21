@@ -96,6 +96,10 @@ nav ul{
 /* Styling for h1 elements */
 h1 {
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 4px solid #000;
+  padding-bottom: 6px;
 }
 
 /* Styling for a container element */
