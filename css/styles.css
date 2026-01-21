@@ -153,6 +153,11 @@ h1 {
 .contact form {
   flex: 1;
 }
+.form-feedback{
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
 
 /* Styling for contact paragraphs */
 .contact p {

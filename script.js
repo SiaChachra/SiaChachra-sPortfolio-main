@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     const formData = {
-      name: document.querySelector('input[name="name"]').value,
-      email: document.querySelector('input[name="email"]').value,
-      message: document.querySelector('textarea[name="message"]').value,
+      name: document.querySelector('input[name="name"]').value.trim(),
+      email: document.querySelector('input[name="email"]').value.trim(),
+      message: document.querySelector('textarea[name="message"]').value.trim(),
     };
 
     if (feedback) feedback.textContent = "Sending...";
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (feedback) feedback.textContent = data.message;
 
       if (res.ok) form.reset();
-    } catch (err) {
+    } catch {
       if (feedback) feedback.textContent = "Error submitting form.";
     }
   });
