@@ -324,8 +324,22 @@ form button {
 
 /* Styling for the header text on the back sides of the flipping boxes. */
 .flip-box-back h2 {
-  font-style: italic;
-  text-decoration: underline;
+   text-decoration: none;          
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-style: italic; 
+}
+.flip-box-back h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 70%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
 }
 
 /* Styling for images on the front sides of the flipping boxes. */
