@@ -1,0 +1,631 @@
+/* Importing the Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+/* Resetting default padding and margin for all elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for the custom scrollbar */
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #f3d2d2;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6b6a6a;
+}
+
+/* Styling for the header section */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  line-height: 1.7em;
+  text-align: center;
+  max-width: 117rem;
+  background-color: #FCEEE6;
+}
+
+/* Styling for the header's h2 element */
+header  h2 {
+  padding-bottom: 2rem;
+  margin-left: 30rem;
+  font-size: 5rem;
+  font-family: localFont;
+}
+
+/* Styling for the container holding the "About Me" section */
+.about-me-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Styling for images in the "About Me" section */
+.about-me-container img {
+  width: 12vw;
+  height: 20vw;
+  border-radius: 50%;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: -6vw;
+  filter: blur(0.018rem);
+}
+
+/* Styling for hovered images in the "About Me" section */
+.about-me-container img:hover {
+  filter: contrast(110%) blur(0rem);
+}
+
+.about-me-container p {
+  max-width: 50rem;
+  margin-left: 10rem;
+  font-size: larger;
+  font-family: 'Alegreya SC';
+}
+
+/* Styling for various elements in the body */
+body, h1, h2, h3, p, ul, li {
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+
+/* General styling for the body */
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-family: 'Alegreya SC';
+  line-height: 1.6;
+  color: #333;
+  background-color: #FCEEE6;
+}
+
+nav ul{
+  font-family: 'Alegreya SC';
+}
+
+/* Styling for h1 elements */
+h1 {
+  text-align: center;
+}
+
+/* Styling for a container element */
+.container {
+  padding: 5rem;
+}
+
+/* Styling for the "Projects" section */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-top: 10rem;
+  background-color: #c9c7c76d;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  height: auto;
+  font-family: 'Alkatra';
+  font-size: 1.3rem;
+}
+
+/* Styling for the project headings */
+.project-heading {
+  padding-top: 3rem;
+  background-color: #c9c7c76d;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  color: #fc466b;
+}
+
+/* Styling for the "Contact" section */
+.contact {
+  display: flex;
+  background-color: #FCEEE6;
+  padding: 4rem;
+}
+
+/* Styling for the contact container */
+.contact .container {
+  flex: 1;
+  padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for contact headings */
+.contact .container h2 {
+  text-align: center;
+  font-weight: 900;
+  padding-bottom: 3rem;
+}
+
+/* Styling for the contact form */
+.contact form {
+  flex: 1;
+}
+
+/* Styling for contact paragraphs */
+.contact p {
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Styling for social media icons */
+.icons a {
+  width: 4vh;
+  margin: 0 1rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+/* Styling for hovered social media icons */
+.icons a:hover {
+  filter: opacity(0.7);
+}
+
+/* Styling for the form */
+form {
+  max-width: 37.5rem;
+  margin: 0 auto;
+  box-shadow: 0 0.1rem 0.25rem #000;
+  border-radius: 0.3rem;
+  padding: 3rem;
+  background-color: #f2d2d7;
+}
+
+/* Styling for form groups */
+form .form-group {
+  margin-bottom: 1.3rem;
+}
+
+/* Styling for form labels */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Styling for form inputs and textareas */
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 0.06rem solid #ddd;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Styling for form textareas */
+form textarea {
+  resize: vertical;
+}
+
+/* Styling for form buttons */
+form button {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  transition: background-color 0.3s;
+  border-radius: 0.3rem;
+  animation: wiggle 2s linear infinite;
+}
+
+.contact p{
+  font-family: 'Alegreya SC';
+}
+
+/* Keyframes animation for button wiggle effect */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* Styling for the footer */
+.footer-container {
+  text-align: center;
+  background-color: #c9c7c76d;
+  padding: 1rem;
+}
+
+/* Styling for flip boxes and their inner content */
+.flip-box {
+  margin-bottom: 10rem;
+  background-color: transparent;
+  width: 100%;
+  height: 31.25rem;
+  border: 0.625rem solid #f1f1f1;
+  perspective: 62.5rem; /* Remove this if you don't want the 3D effect */
+}
+
+/* Styling for flip box inner content */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Styling for flipping boxes on hover to show their back side. */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Styling for the front and back sides of the flipping boxes. */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Styling for the front sides of the flipping boxes. */
+.flip-box-front {
+  background-color: #bbb;
+  color: #000;
+}
+
+/* Styling for the back sides of the flipping boxes. */
+.flip-box-back {
+  background-color: #c9c7c76d;
+  color: #000;
+  transform: rotateY(180deg);
+}
+
+/* Styling for the header text on the back sides of the flipping boxes. */
+.flip-box-back h2 {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Styling for images on the front sides of the flipping boxes. */
+.flip-box-front img {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border: 0.3rem solid #000;
+  border-radius: 0.25rem;
+  filter: drop-shadow(1rem 1rem 1.25rem #000);
+  padding-bottom: 1rem;
+}
+
+/* Styling for headings on the flipping boxes. */
+.flip-box h2 {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-weight: 900;
+}
+
+/* Styling for the logo holder. */
+.logo-holder {
+  width: 11.25rem;
+  height: 13.75rem;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem;
+  -webkit-transform: translateZ(0);
+}
+
+.bg {
+  position: absolute;
+  top: 0.56rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background: url(http://boutique.flarework.com/wp-content/themes/boutique/img/logo_large.png) center 0px no-repeat;
+  background-size: contain;
+  -webkit-filter: drop-shadow(0rem 0.3rem 1.5rem rgba(0,0,0,0.5));
+}
+
+/* Styling for the progress bars. */
+.bar {
+  position: relative;
+  height: 1.0rem;
+  background: #6a6a6a;
+  width:  0%;
+  top: 3rem;
+  left: 1.125rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 0.18rem rgba(192,192,192,0.9);
+  animation: fill 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill1 {
+  animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill2 {
+  animation: fill-2 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill3 {
+  animation: fill-3 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill4 {
+  animation: fill-4 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill5 {
+  animation: fill-5 5s infinite alternate, colors 5s infinite alternate;
+}
+
+.bar.fill6 {
+  animation: fill-6 5s infinite alternate, colors 5s infinite alternate;
+}
+
+/* Keyframe animations for filling progress bars and changing colors. */
+@keyframes fill {
+  0%   { width: 0; }
+  33%  { width: 30px; }
+  66%  { width: 10px; }
+  100% { width: 105px; }
+}
+
+@keyframes fill-1 {
+  0%   { width: 0; }
+  33%  { width: 50px; }
+  66%  { width: 20px; }
+  100% { width: 130px; }
+}
+
+@keyframes fill-2 {
+  0%   { width: 0; }
+  33%  { width: 90px; }
+  66%  { width: 70px; }
+  100% { width: 136px; }
+}
+
+@keyframes fill-3 {
+  0%   { width: 0; }
+  33%  { width: 50px; }
+  66%  { width: 24px; }
+  100% { width: 109px; }
+}
+
+@keyframes fill-4 {
+  0%   { width: 0; }
+  33%  { width: 98px; }
+  66%  { width: 34px; }
+  100% { width: 99px; }
+}
+
+@keyframes fill-5 {
+  0%   { width: 0; }
+  33%  { width: 30px; }
+  66%  { width: 10px; }
+  100% { width: 148px; }
+}
+
+@keyframes fill-6 {
+  0%   { width: 0; }
+  33%  { width: 48px; }
+  66%  { width: 22px; }
+  100% { width: 140px; }
+}
+
+@keyframes colors {
+  0% { background-color: #5a5a5a; }
+  50% { background-color: #3a3; }
+  100% { background-color: #6a6a6a; }
+}
+
+/* Styling for the navigation bar. */
+nav {
+  background-color: #333; /* Change this to your desired background color */
+  overflow-x: scroll;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  padding-right: 6.25rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1rem;
+}
+
+
+
+/* Styling the navigation header */
+nav h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Kaushan Script', cursive; 
+  text-shadow: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+  font-family: localFont;
+  src: url('../KaushanScript-Regular.otf');
+}
+
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'Alegreya SC';  }
+
+  nav ul a {
+    margin-right: 0;
+  }
+}
+
+.waviy {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.waviy {
+  background-color: #000;
+  position: relative;
+  -webkit-box-reflect: below -3rem linear-gradient(transparent, rgba(0,0,0,0.5));
+  font-size: 3.75rem;
+  text-align: center;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+/* Keyframe animation for text wave effect. */
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-1.25rem)
+  }
+}
+  
+/* Styling for the skills section. */
+.skills {
+  padding: 5rem 0;
+  background-color: #c9c7c76d;
+}
+
+/* Styling for skill list headings and items. */
+.skills h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.skills p {
+  text-align: center;
+  max-width: 50rem;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+}
+
+/* Styling for the skill list. */
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the container of skills. */
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+/* Styling for individual skill items. */
+.skill-list li {
+  position: relative;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #6b6a6a;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  /* height: 45px; */
+  width: 9.3rem;
+}
+
+
+  /* For smaller screens */
+  @media (max-width: 768px) {
+    .about-me-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .about-me-container img {
+      width: 80%;
+      height: auto;
+      margin: 1rem 0;
+    }
+    
+    .about-me-container p {
+      margin: 1rem;
+    }
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 768px) {
+    .projects {
+      grid-template-columns: 100%;
+      padding-left: 2rem;
+    }
+    
+    .flip-box {
+      width: 100%;
+    }
+  }
+  
+ 
