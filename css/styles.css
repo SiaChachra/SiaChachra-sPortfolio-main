@@ -324,7 +324,7 @@ form button {
 
 /* Styling for the header text on the back sides of the flipping boxes. */
 .flip-box-back h2 {
-   text-decoration: none;          
+   text-decoration: underline;          
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
